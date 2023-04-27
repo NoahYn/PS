@@ -11,6 +11,4 @@ https://solved.ac/profile/noah0015
 [![Solved.ac
 프로필](http://mazassumnida.wtf/api/mini/generate_badge?boj=noah0015)](https://solved.ac/noah0015) 
 
-![hyp3rflow's solved.ac stats](https://github-readme-solvedac.hyp3rflow.vercel.app/api/?handle=noah0015)
-
 <br/>
