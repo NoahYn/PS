@@ -1,0 +1,10 @@
+-- 코드를 작성해주세요
+with CTE as (
+    SELECT EMP_NO, SUM(SCORE) as SCORE FROM HR_GRADE
+        GROUP BY EMP_NO 
+        ORDER BY 2 desc limit 1
+)
+
+SELECT C.SCORE, E.EMP_NO, E.EMP_NAME, E.POSITION, E.EMAIL 
+    FROM HR_EMPLOYEES as E
+        JOIN CTE as C on C.EMP_NO = E.EMP_NO
