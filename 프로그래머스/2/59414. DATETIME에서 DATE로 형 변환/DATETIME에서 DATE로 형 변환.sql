@@ -1,0 +1,9 @@
+-- 코드를 입력하세요
+SELECT ANIMAL_ID,	NAME,	
+   # DATE_FORMAT(DATETIME, '%Y-%m-%d') 
+    SUBSTRING_INDEX(DATETIME, " ", 1)
+    as '날짜'
+
+FROM ANIMAL_INS
+
+ORDER BY 1
