@@ -1,0 +1,14 @@
+-- 코드를 작성해주세요
+
+SELECT I.ITEM_ID,	I.ITEM_NAME,	I.RARITY from ITEM_INFO as I inner join ITEM_TREE as T on I.ITEM_ID = T.ITEM_ID 
+
+where PARENT_ITEM_ID in (SELECT ITEM_ID from ITEM_INFO where RARITY = "RARE" )
+
+order by ITEM_ID desc
+
+# ITEM_ID	ITEM_NAME	RARITY	PRICE   PARENT_ITEM_ID
+# 0   	ITEM_A  	RARE	10000   NULL
+# 1	    ITEM_B  	RARE	9000    0  
+# 2   	ITEM_C  	LEGEND	11000   0
+# 3   	ITEM_D	    RARE	10000   1
+# 4   	ITEM_E	    RARE	12000   1
