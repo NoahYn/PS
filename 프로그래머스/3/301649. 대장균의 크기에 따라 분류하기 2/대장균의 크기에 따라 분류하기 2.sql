@@ -1,0 +1,11 @@
+-- 코드를 작성해주세요
+
+SELECT ID, 
+    CASE
+        WHEN NTILE(4) over (ORDER BY SIZE_OF_COLONY) = 4 then 'CRITICAL'
+        WHEN NTILE(4) over (ORDER BY SIZE_OF_COLONY) = 3 then 'HIGH'
+        WHEN NTILE(4) over (ORDER BY SIZE_OF_COLONY) = 2 then 'MEDIUM'
+        ELSE 'LOW'
+    END	as COLONY_NAME 
+FROM ECOLI_DATA
+ORDER BY ID
