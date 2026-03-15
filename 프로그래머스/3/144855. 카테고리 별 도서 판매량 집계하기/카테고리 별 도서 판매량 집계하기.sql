@@ -1,0 +1,12 @@
+-- 코드를 입력하세요
+
+#카테고리 별 도서 판매량을 합산
+
+SELECT B.CATEGORY, SUM(S.SALES) as TOTAL_SALES FROM BOOK as B
+    JOIN BOOK_SALES as S on B.BOOK_ID = S.BOOK_ID
+
+WHERE S.SALES_DATE like '2022-01%'
+
+GROUP BY B.CATEGORY
+
+ORDER BY 1 asc
