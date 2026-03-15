@@ -1,0 +1,10 @@
+-- 코드를 입력하세요
+SELECT 
+    (
+        FLOOR(PRICE / 10000) * 10000
+    ) as PRICE_GROUP
+    ,COUNT(*) as PRODUCTS 
+    from PRODUCT 
+    
+    GROUP BY PRICE_GROUP
+    ORDER BY PRICE_GROUP asc
