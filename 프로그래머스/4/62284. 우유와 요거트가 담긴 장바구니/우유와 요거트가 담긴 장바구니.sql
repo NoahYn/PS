@@ -1,0 +1,16 @@
+-- 코드를 입력하세요
+
+with MILK as (
+    SELECT CART_ID FROM CART_PRODUCTS
+    WHERE NAME = 'Milk'
+),
+YOGURT as(
+    SELECT CART_ID FROM CART_PRODUCTS
+    WHERE NAME = 'Yogurt'
+)
+
+#우유와 요거트를 동시에 구입한 장바구니의 아이디를 조회
+SELECT distinct CART_ID FROM CART_PRODUCTS
+WHERE CART_ID in (SELECT * FROM YOGURT)
+    and CART_ID in (SELECT * FROM MILK)
+ORDER BY 1
