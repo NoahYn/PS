@@ -1,0 +1,8 @@
+-- 코드를 입력하세요
+
+SELECT O.ANIMAL_ID, O.NAME FROM ANIMAL_OUTS as O
+    LEFT JOIN ANIMAL_INS as I on O.ANIMAL_ID = I.ANIMAL_ID
+    WHERE I.NAME is NULL and O.NAME is not null
+    ORDER BY 1 asc 
+    
+#SELECT ANIMAL_ID, NAME FROM
